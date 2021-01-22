@@ -1,0 +1,244 @@
+:root {
+  --main-white: #f0f0f0;
+  --main-red: #be3144;
+  --main-blue: #45567d;
+  --main-gray: #303841;
+  --main-black: black;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.4;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-white);
+}
+
+#navbar {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+  min-height: 50px;
+  background: var(--main-red);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+#nav-link {
+  list-style-type: none;
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#nav-link li {
+  list-style: none;
+}
+
+#nav-link a {
+  text-decoration: none;
+  color: var(--main-white);
+  font-size: larger;
+  font-weight: 400;
+  padding: 3.3vh;
+  display: block;
+  transition: background-color 0.5s ease-in-out;
+}
+
+#nav-link a:hover {
+  background-color: rgb(56, 52, 52);
+}
+
+#welcome-section {
+  width: 100%;
+  height: 100vh;
+  background-color: #303841;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#main-header {
+  color: var(--main-white);
+  font-size: 4.5vmax;
+}
+
+#sub-header {
+  color: var(--main-red);
+  font-size: 2.5vmax;
+  font-style: italic;
+}
+
+#projects {
+  padding: 5vh 0 5vh 0;
+  background-color: var(--main-blue);
+  text-align: center;
+}
+
+#projects-header {
+  color: var(--main-white);
+  border-bottom: 2px solid var(--main-white);
+  text-align: center;
+  display: table;
+  margin: 0 auto 6vh auto;
+  font-size: 3vmax;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+
+#project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
+  /* grid-template-rows: 450px 450px; */
+  grid-gap: 3rem;
+  width: 95%;
+  margin: 0 auto;
+}
+
+#project-img {
+  display: block;
+  width: 100%;
+}
+
+#project-title {
+  background-color: #303841;
+  color: var(--main-white);
+  font-size: 1.7rem;
+  padding: 10px;
+  margin-top: auto;
+}
+
+span {
+  color: #303841;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.project-tile {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease-in-out;
+  border-bottom: 1px solid var(--main-red);
+}
+
+.project-tile:hover span {
+  color: var(--main-red);
+}
+
+.project-tile:hover {
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 320px) {
+  #project-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  #project-title {
+    padding: 5px;
+  }
+}
+
+#show-all-btn {
+  display: inline-block;
+  background: var(--main-gray);
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  transition: background 0.3s ease-out;
+  margin-top: 5vh;
+}
+
+#show-all-btn:hover {
+  background: var(--main-red);
+}
+
+#show-all-btn > i {
+  margin-left: 10px;
+  transition: transform 0.3s ease-out;
+}
+
+#show-all-btn:hover > i {
+  transform: translateX(2px);
+}
+
+#contact {
+  background: var(--main-gray);
+  height: 50vh;
+  /* width: 100%; */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 3vh;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact-header {
+  color: var(--main-white);
+  font-size: 3rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+
+#contact-logo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2vw;
+}
+
+#profile-link {
+  font-size: 1.5rem;
+  font-family: "Raleway", sans-serif;
+  text-shadow: 2px 2px 4px #000000;
+  transition: transform 0.3s ease-in-out;
+}
+
+#profile-link:hover {
+  transform: translateY(8px);
+}
+
+#profile-link > i {
+  margin-right: 10px;
+}
+
+@media (max-width: 700px) {
+  #nav-link {
+    width: 100%;
+  }
+
+  #nav-link a {
+    font-size: small;
+    font-weight: 500;
+  }
+
+  #main-header {
+    font-size: 4.2vmax;
+  }
+
+  #sub-header {
+    font-size: 2.5vmax;
+  }
+
+  #contact-header {
+    font-size: 1.6rem;
+  }
+
+  #profile-link {
+    font-size: 1.2rem;
+  }
+}
